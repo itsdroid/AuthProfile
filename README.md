@@ -43,7 +43,6 @@ npm install
 
 
 Set environment variables (create .env file)
-
 PORT=5000
 JWT_SECRET=your_jwt_secret_key
 DB_URI=your_database_connection_string
