@@ -1,33 +1,23 @@
-JWT Authentication Website
+JWT Authentication Website 
 
 A web application built with Node.js, Express.js, EJS, and JWT (JSON Web Token) for secure authentication.
 
 🚀 Features
 
 User registration & login
-
 JWT-based authentication & authorization
-
 Password hashing (bcrypt)
-
 Protected routes (only accessible with valid JWT)
-
 EJS templating for UI rendering
-
 Express.js backend with middleware support
 
 🛠️ Tech Stack
 
 Node.js – Backend runtime
-
 Express.js – Server framework
-
 EJS – Templating engine
-
 JWT – Authentication
-
 MongoDB / PostgreSQL / MySQL (choose your DB)
-
 bcrypt – Password hashing
 
 📂 Project Structure
@@ -49,7 +39,6 @@ cd your-repo-name
 
 
 Install dependencies
-
 npm install
 
 
@@ -61,7 +50,6 @@ DB_URI=your_database_connection_string
 
 
 Run the server
-
 npm start
 
 
@@ -70,21 +58,15 @@ App will run on http://localhost:5000
 🔑 Authentication Flow
 
 User registers with email & password → password is hashed & stored.
-
 On login, user gets a JWT token.
-
 JWT is stored in cookies/localStorage (your choice).
-
 Protected routes verify token before access.
 
 📸 Screenshots
-
 (Add screenshots of your login/signup pages, dashboard, etc.)
 
 🤝 Contributing
-
 Pull requests are welcome. For major changes, open an issue first to discuss what you’d like to change.
 
 📜 License
-
 MIT
