@@ -20,7 +20,7 @@ JWT – Authentication
 MongoDB / PostgreSQL / MySQL (choose your DB)
 bcrypt – Password hashing
 
-📂 Project Structure
+```666📂 Project Structure
 ├── public/            # Static files (CSS, JS, images)
 ├── views/             # EJS templates
 ├── routes/            # Express routes
@@ -29,7 +29,7 @@ bcrypt – Password hashing
 ├── server.js          # App entry point
 ├── package.json
 └── README.md
-
+```
 ⚙️ Installation & Setup
 
 Clone the repository
