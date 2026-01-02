@@ -56,10 +56,28 @@ app.get('/profile', isLoggedIn, async (req, res) => {
 
 });
 
+app.get('/note/edit/:id', isLoggedIn, async (req, res) => {
+    let success = req.flash('success');
+    let error = req.flash('error');
+    res.render('noteedit', { user: req.user , success , error , notloggedin:false });
+});
+
+app.post('/note/update/:id', isLoggedIn, async (req, res) => {
+    try {
+        await userModel.findByIdAndUpdate(req.user._id, { note: req.body.note });
+        req.flash('success', 'Note updated successfully');
+        res.redirect('/profile');
+    } catch (err) {
+        console.error('Error updating note:', err);
+        req.flash('error', 'Something went wrong');
+        res.redirect('/note/edit/' + req.params.id);
+    }
+});
+
 app.get('/profile/upload/:id', isLoggedIn, async (req, res) => {
     let success = req.flash('success');
     let error = req.flash('error');
-    res.render('profileupload', { user: req.user , success , error , notloggedin:false });
+    res.render('profileupload', { user: req.user, success, error, notloggedin: false });
 });
 
 app.post('/upload/:id', isLoggedIn, upload.single("image"), async (req, res) => {
@@ -86,7 +104,7 @@ app.post('/register', registerUser);
 app.post('/login', loginUser);
 
 
-const PORT = process.env.PORT || 8080;  
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+    console.log(`Server running on port ${PORT}`);
 });

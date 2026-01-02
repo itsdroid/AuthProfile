@@ -9,6 +9,10 @@ const userSchema = mongoose.Schema({
     profilepic: {
         type: String,
         default: "user.svg"
+    },
+    note: {
+        type: String,
+        default: ''
     }
 });
 

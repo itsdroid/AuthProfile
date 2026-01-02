@@ -30,22 +30,7 @@ flashMessages.forEach(msg => {
 
 
 
-// time update 
-function updateDateTime() {
-const now = new Date();
-const day = now.toLocaleDateString('en-US', { weekday: 'long' });
-const date = now.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-const time = now.toLocaleTimeString('en-US');
 
-document.getElementById('datetime').innerHTML = `
-    <div class="text-2xl md:text-4xl  ">${day}</div>
-    <div class="text-xs md:text-sm">${date}</div>
-    <div class="text-2xl md:text-3xl mb-20 md:mb-2"> ${time}</div>
-`;
-}
-
-setInterval(updateDateTime, 1000);  
-updateDateTime();  
 
 
 // email validator
