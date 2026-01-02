@@ -46,7 +46,7 @@ window.addEventListener('DOMContentLoaded', () => {
 // email validator
 async function validateEmail() {
     const email = document.getElementById("email").value;
-    const apiKey = "a84c7fb312224cea9a63469748e80a43"; // Replace with actual API key
+    const apiKey = process.env.APIKEY; // Replace with actual API key
     const url = `https://api.hunter.io/v2/email-verifier?email=${email}&api_key=${apiKey}`;
 
     const response = await fetch(url);
