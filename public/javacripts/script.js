@@ -41,24 +41,3 @@ window.addEventListener('DOMContentLoaded', () => {
         setInterval(updateDateTime, 1000);
     }
 });
-
-
-
-
-
-
-// email validator
-async function validateEmail() {
-    const email = document.getElementById("email").value;
-    const apiKey = process.env.APIKEY; // Replace with actual API key
-    const url = `https://api.hunter.io/v2/email-verifier?email=${email}&api_key=${apiKey}`;
-
-    const response = await fetch(url);
-    const data = await response.json();
-
-    if (data.data.status === "valid") {
-        req.flash('success', 'valid email');
-    } else {
-        req.flash('error', 'invalid email');
-    }
-}
