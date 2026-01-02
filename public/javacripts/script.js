@@ -30,8 +30,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
     if (document.getElementById('datetime')) {
         function updateDateTime() {
-            const now = new Date();
-            document.getElementById('datetime').innerText = now.toLocaleString();
+            try {
+                const now = new Date();
+                document.getElementById('datetime').innerText = now.toLocaleString();
+            } catch (error) {
+                console.error('Error updating date and time:', error);
+            }
         }
         updateDateTime();
         setInterval(updateDateTime, 1000);
