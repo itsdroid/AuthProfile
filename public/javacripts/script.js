@@ -26,6 +26,16 @@ flashMessages.forEach(msg => {
         }, 500);  
     }, 1000); 
 });
+
+// Date and time update
+if (document.getElementById('datetime')) {
+    function updateDateTime() {
+        const now = new Date();
+        document.getElementById('datetime').innerText = now.toLocaleString();
+    }
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
+}
 });
 
 
