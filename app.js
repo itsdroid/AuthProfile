@@ -59,7 +59,7 @@ app.get('/profile', isLoggedIn, async (req, res) => {
 app.get('/note/edit/:id', isLoggedIn, async (req, res) => {
     let success = req.flash('success');
     let error = req.flash('error');
-    res.render('noteedit', { user: req.user , success , error , notloggedin:false });
+    res.render('noteedit', { user: req.user, success, error, notloggedin: false });
 });
 
 app.post('/note/update/:id', isLoggedIn, async (req, res) => {

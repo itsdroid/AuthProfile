@@ -31,9 +31,10 @@
                         <div class="flex flex-col">
                             <h1 class=" text-3xl md:text-4xl text-white font-bold">Welcome <%= user.firstname %>
                             </h1>
-                            <div class="w-[65vw] md:w-[280px]">
-                                <p class="text-xs text-green-400">Note: <%= user.note || 'No note added yet.' %></p>
-                                <a href="/note/edit/<%= user._id %>" class="text-blue-400 underline">Edit Note</a>
+                            <div class="w-[55vw] md:w-[280px]">
+                                <p class="text-x text-green-400"> <%= user.note || 'No note added yet.' %>
+                                </p>
+                                <a href="/note/edit/<%= user._id %>" class="text-blue-400 text-xs underline">Edit Note</a>
                             </div>
                         </div>
                     </div>
